@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/play_founds/playfounds-index.css' %}" />
+{% endblock %}
+
+{% block content %}
+<div class="content">
+
+    <section class="top-section">
+        <h1>PlayFounds</h1>
+    </section>
+
+    <section class="middle-section">
+
+    </section>
+
+    <section class="bottom-section">
+        {% for playfound in playfounds %}
+        <a href="{% url 'playfounds-detail' playfound.id %}" class="location-button">
+            {{ playfound.location }}
+        </a>
+        {% endfor %}
+    </section>
+</div>
+{% endblock %}

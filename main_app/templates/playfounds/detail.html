@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/playfounds/playfounds-detail.css' %}">
+{% endblock head %}
+
+{% block content %}
+<section class="location-header">
+  <h2>{{ playfound.location}}</h2>
+</section>
+
+<section>
+  <h1>Activities at this location</h1>
+  <ul>
+    {% for playfound in playfounds %}
+    <li>{{ playfound.name }}: {{ playfound.description }}</li>
+    {% empty %}
+    <p>No activities available for this location.</p>
+    {% endfor %}
+  </ul>
+
+  <div class="playfound-actions">
+    <a href="{% url 'playfound-update' playfound.id %}" class="btn warn">Edit</a>
+    <a href="{% url 'playfound-delete' playfound.id %}" class="btn danger">Delete</a>
+  </div>
+  </div>
+</section>
+
+{% endblock content %}
