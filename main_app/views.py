@@ -48,8 +48,6 @@ def playfounds_index(request):
 
 @login_required
 def playfound_detail(request, pk):
-    # playfound = PlayFound.objects.get(id=playfound_id)
-    # return render(request, 'playfounds/detail.html', {'playfound': playfound})
     playfound = get_object_or_404(PlayFound, pk=pk)
     activities = playfound.activities.all()
     return render(request, 'playfounds/detail.html', {

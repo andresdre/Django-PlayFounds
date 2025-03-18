@@ -6,11 +6,8 @@
 
 {% block content %}
 
-<section class="logo-container">
-  <div class="logo-image-container">
-    <img src="{% static 'images/splash.svg' %}" alt="PlayFounds Logo" />
-  </div>
-  <img src="{% static 'images/logotype.svg' %}" alt="Text reads: PlayFounds" />
+<section class="top-section">
+    <h1>PlayFounds</h1>
 </section>
 
 {% if not user.is_authenticated %}  

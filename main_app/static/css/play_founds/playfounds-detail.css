@@ -1,62 +1,129 @@
-/* Ensuring location name and description are styled correctly */
-.location-header h1 {
+/* General Styling */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    background-color: white;
+    padding: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    background-color: #ddd;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease-in-out;
+    color: black;
+    display: inline-block;
+}
+
+nav a:hover {
+    background-color: #bbb;
+}
+
+nav a.active {
+    background-color: #a8a8a8;
+}
+
+.top-section {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.top-section h2 {
     font-size: 2rem;
     font-weight: bold;
-    margin-bottom: 10px;
+    color: #222;
 }
 
-.location-header p {
-    font-size: 1rem;
-    color: #555;
-    margin-bottom: 20px;
+.middle-section {
+    text-align: center;
+    margin: 20px 0;
 }
 
-/* Styling the image if it exists */
-.location-header img {
+.middle-section img {
     max-width: 100%;
     height: auto;
-    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Styling the activities list */
-.location-header h2 {
+.bottom-section {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.bottom-section h2 {
     font-size: 1.5rem;
     margin-bottom: 10px;
 }
 
-.location-header ul {
-    list-style-type: none;
-    padding-left: 0;
+.bottom-section ul {
+    list-style: none;
+    padding: 0;
 }
 
-.location-header ul li {
-    font-size: 1rem;
-    margin-bottom: 8px;
-}
-
-/* Styling the action buttons */
-.playfound-actions {
-    margin-top: 20px;
-}
-
-.playfound-actions .btn {
-    padding: 10px 15px;
+.bottom-section ul li {
+    background: #e9ecef;
+    padding: 10px;
     border-radius: 5px;
-    text-decoration: none;
-    margin-right: 10px;
+    margin: 5px 0;
+    font-size: 1rem;
+    color: #444;
+    text-align: center;
+}
+
+.playfound-actions {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.btn {
     display: inline-block;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    text-align: center;
 }
 
-.playfound-actions .btn.warn {
-    background-color: #ffcc00;
+.btn.warn {
+    background-color: #ffc107;
+    color: #333;
+}
+
+.btn.warn:hover {
+    background-color: #e0a800;
+}
+
+.btn.danger {
+    background-color: #dc3545;
     color: #fff;
 }
 
-.playfound-actions .btn.danger {
-    background-color: #ff4444;
-    color: #fff;
+.btn.danger:hover {
+    background-color: #c82333;
 }
 
-.playfound-actions .btn:hover {
-    opacity: 0.8;
-}
